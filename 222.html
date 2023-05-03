@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemple de champ de texte avec vérification</title>
+  </head>
+  <body>
+  
+    <input type="text" id="myInput">
+    <button onclick="checkAndAlert()">Cliquez ici</button>
+    
+    
+    <script>
+      function checkAndAlert() {
+        var input = document.getElementById("myInput");
+        var inputValue = input.value.trim(); 
+        
+        if (inputValue === "") {
+          alert("Le champ de texte est vide !");
+        } else {
+          input.select(); 
+        }
+      }
+    </script>
+  </body>
+</html>

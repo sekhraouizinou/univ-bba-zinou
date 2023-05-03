@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calcul de somme</title>
+</head>
+<body>
+  <script>
+    function somme() {
+      let resultat = 0;
+      for (let i = 0; i < arguments.length; i++) {
+        resultat += arguments[i];
+      }
+      return resultat;
+    }
+
+    let nbArguments = parseInt(prompt("Combien de nombres voulez-vous additionner ?"));
+    let nombres = [];
+
+    for (let i = 0; i < nbArguments; i++) {
+      nombres.push(parseInt(prompt("Entrez un nombre :")));
+    }
+
+    let resultat = somme(...nombres);
+    alert("Le resultat de la somme est " +resultat+".") ;
+  </script>
+</body>
+</html>

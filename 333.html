@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemple de confirmation de nom d'utilisateur</title>
+  </head>
+  <body>
+    
+    <script>
+     
+      var userName = prompt("Veuillez entrer votre nom d'utilisateur :");
+      
+      
+      var confirmMessage = "Confirmez-vous que votre nom d'utilisateur est : " + userName + " ?";
+      var confirmResult = confirm(confirmMessage);
+      
+      
+      if (confirmResult) {
+        alert("Votre nom d'utilisateur est : " + userName);
+      }
+    </script>
+  </body>
+</html>

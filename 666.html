@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remplacer les lettres par 'x'</title>
+  <script>
+    function remplacerParX() {
+      var chaine = document.getElementById("chaineInput").value; 
+      var chaineModifiee = chaine.replace(/[a-zA-Z]/g, 'x'); 
+      document.getElementById("resultat").innerHTML = "Résultat : " + chaineModifiee; 
+    }
+  </script>
+</head>
+<body>
+  <h2>Remplacer les lettres par 'x'</h2>
+  <input type="text" id="chaineInput" placeholder="Entrez une chaîne de caractères">
+  <button onclick="remplacerParX()">Remplacer</button>
+  <p id="resultat"></p>
+</body>
+</html>

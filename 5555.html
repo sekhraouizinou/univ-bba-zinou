@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vérification de chaîne de caractères</title>
+    <script>
+        function verifieChaine() {
+            var chaine = document.getElementById('chaineInput').value; 
+            var resultat = document.getElementById('resultat'); 
+
+            
+            if (/^[a-fA-F]/.test(chaine)) {
+                resultat.innerHTML = "Vrai";
+            } else {
+                resultat.innerHTML = "Faux";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Vérification de chaîne de caractères</h1>
+    <form>
+        <label for="chaineInput">Entrez une chaîne de caractères :</label>
+        <input type="text" id="chaineInput" name="chaineInput">
+        <input type="button" value="Vérifier" onclick="verifieChaine()">
+    </form>
+    <p id="resultat"></p>
+</body>
+</html>

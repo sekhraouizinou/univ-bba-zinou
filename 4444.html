@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function somme(...args) {
+  
+  let total = 0;
+  for (let nombre of args) {
+    total += nombre;
+  }
+  return total;
+}
+
+
+let resultat1 = somme(1, 2, 3, 4, 5);    
+let resultat2 = somme(10, 20, 30);       
+let resultat3 = somme(2.5, 3.7, 1.1);    
+
+
+console.log("Résultat 1 :", resultat1);
+console.log("Résultat 2 :", resultat2);
+console.log("Résultat 3 :", resultat3);
+</script>
+
+</body>
+</html>
+
+  

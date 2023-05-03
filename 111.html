@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemple de bouton avec boîte de dialogue</title>
+  </head>
+  <body>
+    
+    <button onclick="showDialog()">Cliquez ici</button>
+    
+    
+    <div id="dialog" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: white; border: 1px solid #ddd; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+      <p>Bonjour!</p>
+    </div>
+    
+   
+    <script>
+      function showDialog() {
+        document.getElementById("dialog").style.display = "block";
+      }
+      
+      function hideDialog() {
+        document.getElementById("dialog").style.display = "none";
+      }
+      
+      // Fermer la boîte de dialogue lorsque l'utilisateur clique à l'extérieur de celle-ci
+      window.onclick = function(event) {
+        if (event.target == document.getElementById("dialog")) {
+          hideDialog();
+        }
+      }
+    </script>
+  </body>
+</html>
